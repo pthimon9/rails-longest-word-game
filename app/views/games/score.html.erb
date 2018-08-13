@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<%if @bingo and @word_check %>
+  <p> <%= "congratultions! #{@user_guess} is an English word" %> </p>
+<%elsif !@word_check %>
+ <p> <%= "sorry! #{@user_guess} does not seem to a valid English word" %> </p>
+<% else %>
+ <p> <%= "Sorry! #{@user_guess} cannot be built out of #{@random_letters}" %> </p>
+<% end %>
+
+<%= link_to "Play again", "/new" %>
